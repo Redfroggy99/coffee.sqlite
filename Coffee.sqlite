@@ -1,0 +1,37 @@
+--
+-- Файл сгенерирован с помощью SQLiteStudio v3.3.3 в Пт ноя 22 19:36:34 2024
+--
+-- Использованная кодировка текста: System
+--
+PRAGMA foreign_keys = off;
+BEGIN TRANSACTION;
+
+-- Таблица: db
+CREATE TABLE db (
+    id      INTEGER NOT NULL
+                    UNIQUE
+                    PRIMARY KEY AUTOINCREMENT,
+    subject STRING  NOT NULL,
+    class   STRING  NOT NULL,
+    link    STRING,
+    tag     STRING
+);
+
+INSERT INTO db (
+                   id,
+                   subject,
+                   class,
+                   link,
+                   tag
+               )
+               VALUES (
+                   1,
+                   'Русский язык',
+                   9,
+                   NULL,
+                   'Пунктуация'
+               );
+
+
+COMMIT TRANSACTION;
+PRAGMA foreign_keys = on;
